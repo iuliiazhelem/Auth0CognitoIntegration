@@ -27,6 +27,7 @@ class ViewController: UIViewController {
             return
         }
         
+        //Resume Aamzon login if possible
         self.loginManager.resumeLogin(success, failure)
     }
 

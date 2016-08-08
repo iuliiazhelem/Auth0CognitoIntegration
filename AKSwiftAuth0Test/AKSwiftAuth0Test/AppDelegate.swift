@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         A0Lock.sharedLock().applicationLaunchedWithOptions(launchOptions)
+        //Register social authenticators
         let facebook = A0FacebookAuthenticator.newAuthenticatorWithDefaultPermissions()
         let twitterApiKey = NSBundle.mainBundle().objectForInfoDictionaryKey(kTwitterConsumerKey) as! String
         let twitterApiSecret = NSBundle.mainBundle().objectForInfoDictionaryKey(kTwitterConsumerSecret) as! String
@@ -25,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         A0Lock.sharedLock().registerAuthenticators([twitter, facebook, google]);
 
+        //Add Auth0 logging
         A0LockLogger.logAll()
         
         return true
@@ -52,6 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+    //to allow native logins using other iOS apps, e.g: Twitter, Facebook, Safari etc
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         return A0Lock.sharedLock().handleURL(url, sourceApplication: sourceApplication)
     }

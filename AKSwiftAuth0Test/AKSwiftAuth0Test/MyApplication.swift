@@ -34,7 +34,7 @@ class MyApplication: NSObject {
         dataset = cognitoSync.openOrCreateDataset("MainDataset")
     }
     
-    //Saving JWT Tokens
+    //Store/retrive JWT Tokens and user profile in/from Auth0 keychain
     func storeToken(token:A0Token?, profile:A0UserProfile?)
     {
         let keychain = A0SimpleKeychain(service: kKeychainName)
@@ -108,7 +108,8 @@ class MyApplication: NSObject {
         let keychain = A0SimpleKeychain(service: kKeychainName)
         keychain.clearAll()
     }
-    
+ 
+    //Read text from Amazon Cognito database
     func retrieveText(success : (String?) -> ()) 
     {
         
@@ -117,7 +118,8 @@ class MyApplication: NSObject {
             return nil
         }
     }
-  
+    
+    //Save text in Amazon Cognito database
     func storeText(text:String?)
     {
         if let actualText = text {
