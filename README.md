@@ -92,6 +92,7 @@ Before using the example please make sure that you change some keys in Info.plis
 - REVERSED_CLIENT_ID
 - CFBundleURLSchemes
 
+```
 <key>CFBundleTypeRole</key>
 <string>None</string>
 <key>CFBundleURLName</key>
@@ -102,7 +103,8 @@ Before using the example please make sure that you change some keys in Info.plis
 </array>
 
 a01T8XeajR2FhDBAAz7JQ22mmzqCMoqzud -> a0<Auth0ClientId>
-
+```
+```
 <key>CFBundleTypeRole</key>
 <string>None</string>
 <key>CFBundleURLName</key>
@@ -113,7 +115,8 @@ a01T8XeajR2FhDBAAz7JQ22mmzqCMoqzud -> a0<Auth0ClientId>
 </array>
 
 fb1038202126265858 -> fb<FacebookAppID>
-
+```
+```
 <key>CFBundleTypeRole</key>
 <string>None</string>
 <key>CFBundleURLName</key>
@@ -124,6 +127,7 @@ fb1038202126265858 -> fb<FacebookAppID>
 </array>
 
 com.googleusercontent.apps.514652084725-lbq4ulvpadvb4mmumqg7q3b46mvnshcd -> REVERSED_CLIENT_ID
+```
 
 For more iformation about integrating of auth0 with Amazon cognito please see link
 https://auth0.com/blog/integrating-auth0-with-amazon-cognito-in-ios/
