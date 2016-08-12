@@ -1,6 +1,6 @@
 # Auth0CognitoIntegration
 
-Please make sure that you change some keys in Info.plist with your data:
+Please make sure that you change some keys in `Info.plist`file with your data:
 - Auth0ClientId
 - Auth0Domain
 - CognitoIDPUrl
@@ -45,5 +45,4 @@ fb1038202126265858 -> fb<FacebookAppID>
 
 com.googleusercontent.apps.514652084725-lbq4ulvpadvb4mmumqg7q3b46mvnshcd -> REVERSED_CLIENT_ID
 
-For moew iformation about integrating of auth0 with Amazon cognito please see link
-https://auth0.com/blog/integrating-auth0-with-amazon-cognito-in-ios/
+For more information about integrating Auth0 with Amazon Cognito please check [here](https://auth0.com/blog/integrating-auth0-with-amazon-cognito-in-ios/).
