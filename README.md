@@ -1,6 +1,6 @@
 # Auth0CognitoIntegration
 
-Please make sure that you change some keys in `Info.plist`file with your data:
+Please make sure that you change some keys in `Info.plist` file with your data:
 - Auth0ClientId
 - Auth0Domain
 - CognitoIDPUrl
