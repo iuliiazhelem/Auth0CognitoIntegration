@@ -132,10 +132,10 @@ com.googleusercontent.apps.514652084725-lbq4ulvpadvb4mmumqg7q3b46mvnshcd -> REVE
 
 For more information about integrating of Auth0 with Amazon Cognito please check the following links:
 
-[Link1](https://auth0.com/blog/integrating-auth0-with-amazon-cognito-in-ios/)
-[Link2](http://docs.aws.amazon.com/mobile/sdkforios/developerguide/)
-[Link3](https://forums.aws.amazon.com/thread.jspa?messageID=696941)
-[Link4](http://docs.aws.amazon.com/cognito/latest/developerguide/open-id.html)
+* [Link1](https://auth0.com/blog/integrating-auth0-with-amazon-cognito-in-ios/)
+* [Link2](http://docs.aws.amazon.com/mobile/sdkforios/developerguide/)
+* [Link3](https://forums.aws.amazon.com/thread.jspa?messageID=696941)
+* [Link4](http://docs.aws.amazon.com/cognito/latest/developerguide/open-id.html)
 
 
 
