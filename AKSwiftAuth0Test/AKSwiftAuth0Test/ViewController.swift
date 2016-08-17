@@ -20,73 +20,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let success = {() -> () in
-            self.setupUsername()
-        }
-        let failure = {(error:NSError!) -> () in
-            return
-        }
-        
-        //Resume Aamzon login if possible
-        self.loginManager.resumeLogin(success, failure)
+        self.setupUsername()
     }
-
+    
     @IBAction func clickSaveTextButton(sender: AnyObject) {
         self.setText()
     }
     
-    func socialAuthenticateWithName(name:String) {
-        let success = { (profile: A0UserProfile, token: A0Token) in
-            let success = {() -> () in
-                self.setupUsername()
-            }
-            let failure = {(error: NSError!) -> () in
-                NSLog("Error logging the user in %s", error!.description);
-                self.showMessage("Error logging the user in \(error!.description)")
-            }
-            
-            self.loginManager.completeLogin(token, profile, success, failure)
-        }
-        
-        let failure = { (error: NSError) in
-            print("Oops something went wrong: \(error)")
-            MyApplication.sharedInstance.clearData()
-            self.clearUsername()
-        }
-        A0Lock.sharedLock().identityProviderAuthenticator().authenticateWithConnectionName(name, parameters: nil, success: success, failure: failure)
-        
-    }
-    
-    @IBAction func clickGoogleButton(sender: AnyObject) {
-        self.socialAuthenticateWithName(kGoogleConnectionName)
-    }
-    
-    @IBAction func clickTwitterButton(sender: AnyObject) {
-        self.socialAuthenticateWithName(kTwitterConnectionName)
-    }
-    
-    @IBAction func clickFacebookButton(sender: AnyObject) {
-        self.socialAuthenticateWithName(kFacebookConnectionName)
-    }
-    
-    @IBAction func clickOpenLockUIButton(sender: AnyObject) {
-        let controller = A0Lock.sharedLock().newLockViewController()
-        controller.closable = true
-        controller.onAuthenticationBlock = { (profile, token) in
-            let success = {() -> () in
-                self.setupUsername()
-                self.dismissViewControllerAnimated(true, completion: nil)
-            }
-            let failure = {(error: NSError!) -> () in
-                NSLog("Error logging the user in %s", error!.description);
-                self.showMessage("Error logging the user in \(error!.description)")
-            }
-            
-            self.loginManager.completeLogin(token!, profile!, success, failure)
-           
-        }
-        
-        self.presentViewController(controller, animated: true, completion: nil)
+    @IBAction func clickLogoutButton(sender: AnyObject) {
+        MyApplication.sharedInstance.clearData()
+        A0Lock.sharedLock().clearSessions()
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func setupUsername() {
@@ -120,14 +64,5 @@ class ViewController: UIViewController {
         MyApplication.sharedInstance.storeText(self.enterTextField.text)
         self.textLabel.text = self.enterTextField.text
     }
-    
-    func showMessage(message: String) {
-        dispatch_async(dispatch_get_main_queue()) {
-            let alert = UIAlertController(title: "Auth0", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
-    }
-
 }
 

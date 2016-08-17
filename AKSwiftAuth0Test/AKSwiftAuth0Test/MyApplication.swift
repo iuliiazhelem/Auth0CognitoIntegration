@@ -131,3 +131,16 @@ class MyApplication: NSObject {
         }
     }
 }
+
+class Auth0Alert {
+    
+    func showMessage(message: String, sender: UIViewController) {
+        dispatch_async(dispatch_get_main_queue()) {
+            let alert = UIAlertController(title: "Auth0", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            sender.presentViewController(alert, animated: true, completion: nil)
+        }
+        print("\(message)")
+    }
+}
+
