@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>CognitoIDPUrl</key>
-	<string>juliazhelem.eu.auth0.com</string>
+	<string>{COGNITO_IDP_URL}</string>
 	<key>CognitoPoolID</key>
-	<string>us-west-2:13e1c771-9f51-4b88-a8c9-eafa8e59349a</string>
+	<string>{COGNITO_POOL_ID}</string>
 	<key>Auth0ClientId</key>
-	<string>1T8XeajR2FhDBAAz7JQ22mmzqCMoqzud</string>
+	<string>{CLIENT_ID}</string>
 	<key>Auth0Domain</key>
-	<string>juliazhelem.eu.auth0.com</string>
+	<string>{DOMAIN}</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -91,7 +91,7 @@
 			<string>facebook</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb1038202126265858</string>
+				<string>fb{FACEBOOK_APP_ID}</string>
 			</array>
 		</dict>
 		<dict>
@@ -101,7 +101,7 @@
 			<string>auth0</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>a01T8XeajR2FhDBAAz7JQ22mmzqCMoqzud</string>
+				<string>a0{CLIENT_ID}</string>
 			</array>
 		</dict>
 		<dict>
@@ -111,7 +111,7 @@
 			<string>Google</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.514652084725-lbq4ulvpadvb4mmumqg7q3b46mvnshcd</string>
+				<string>{REVERSED_CLIENT_ID}</string>
 			</array>
 		</dict>
 		<dict>
@@ -119,16 +119,16 @@
 			<string>None</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.akvelon.AKSwiftAuth0Test</string>
+				<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			</array>
 		</dict>
 	</array>
 	<key>CLIENT_ID</key>
-	<string>514652084725-lbq4ulvpadvb4mmumqg7q3b46mvnshcd.apps.googleusercontent.com</string>
+	<string>{GOOGLE_CLIENT_ID}</string>
 	<key>FacebookAppID</key>
-	<string>1038202126265858</string>
+	<string>{FACEBOOK_APP_ID}</string>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:514652084725:ios:266a2468cb81c6c3</string>
+	<string>{GOOGLE_APP_ID}</string>
 	<key>IS_ADS_ENABLED</key>
 	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -144,10 +144,10 @@
 	<key>PROJECT_ID</key>
 	<string>akswiftauth0testapp</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.514652084725-lbq4ulvpadvb4mmumqg7q3b46mvnshcd</string>
+	<string>{REVERSED_CLIENT_ID}</string>
 	<key>TwitterConsumerKey</key>
-	<string>TNDABmgYSVFxdJPCfwIprTXmG</string>
+	<string>{TWITTER_KEY}</string>
 	<key>TwitterConsumerSecret</key>
-	<string>jMwW5QvcPPPpB94lWtYKkJdG3ETmy5x2iaBiBHH7TQBDve1jzi</string>
+	<string>{TWITTER_SECRET}</string>
 </dict>
 </plist>
