@@ -8,7 +8,8 @@ You can integrate your mobile app with two solutions:
 
 First of all you need to configure Amazon Web Services as describe [here](https://auth0.com/blog/integrating-auth0-with-amazon-cognito-in-ios/)
 
-Note: In order for Cognito to verify signature of your `Id Token`, the signature algorithm must be RS256. Setting this to RS256 in the Auth0 console ("Apps->Settings->Show Advanced Settings->OAuth") will allow Cognito to fetch the public key and certificate from your issuer's jwks uri.
+### Note: 
+In order for Cognito to verify signature of your `Id Token`, the signature algorithm **must be RS256**. Setting this to RS256 in the Auth0 console ("Apps->Settings->Show Advanced Settings->OAuth") will allow Cognito to fetch the public key and certificate from your issuer's jwks uri.
 
 Then you can integrate Amazon Cognito into your application. 
 
@@ -82,15 +83,10 @@ func initializeClients(logins: [NSObject : AnyObject]?) -> AWSTask? {
 ```
 
 Before using the example please make sure that you change some keys in `Info.plist` with your data:
+
+##### Auth0 data from [Auth0 Dashboard](https://manage.auth0.com/#/applications)
 - Auth0ClientId
 - Auth0Domain
-- CognitoIDPUrl
-- CognitoPoolID
-- TwitterConsumerKey
-- TwitterConsumerSecret
-- FacebookAppID
-- GOOGLE_APP_ID
-- REVERSED_CLIENT_ID
 - CFBundleURLSchemes
 
 ```
@@ -100,11 +96,22 @@ Before using the example please make sure that you change some keys in `Info.pli
 <string>auth0</string>
 <key>CFBundleURLSchemes</key>
 <array>
-<string>a01T8XeajR2FhDBAAz7JQ22mmzqCMoqzud</string>
+<string>a0{CLIENT_ID}</string>
 </array>
-
-a01T8XeajR2FhDBAAz7JQ22mmzqCMoqzud -> a0<Auth0ClientId>
 ```
+
+##### Cognito data from [Amazon console](https://console.aws.amazon.com/iam/home?#providers)
+- CognitoIDPUrl
+- CognitoPoolID 
+
+##### Twitter data from the configured [Social connection](https://manage.auth0.com/#/connections/social). For more details about connection your app to Twitter see [link](https://auth0.com/docs/connections/social/twitter)
+- TwitterConsumerKey
+- TwitterConsumerSecret
+
+##### Facebook data from the configured [Social connection](https://manage.auth0.com/#/connections/social). For more details about connection your app to Facebook see [link](https://auth0.com/docs/connections/social/facebook)
+- FacebookAppID
+- CFBundleURLSchemes
+
 ```
 <key>CFBundleTypeRole</key>
 <string>None</string>
@@ -112,11 +119,15 @@ a01T8XeajR2FhDBAAz7JQ22mmzqCMoqzud -> a0<Auth0ClientId>
 <string>facebook</string>
 <key>CFBundleURLSchemes</key>
 <array>
-<string>fb1038202126265858</string>
+<string>fb{FACEBOOK_APP_ID}</string>
 </array>
-
-fb1038202126265858 -> fb<FacebookAppID>
 ```
+
+##### Google data from the `GoogleServices-Info.plist` file which you can download from [this wizard](https://developers.google.com/mobile/add?platform=ios). For more details about connection your app to Google see [link](https://auth0.com/docs/connections/social/google) and [iOS doc](https://auth0.com/docs/libraries/lock-ios/native-social-authentication#google)
+- GOOGLE_APP_ID
+- REVERSED_CLIENT_ID
+- CFBundleURLSchemes
+
 ```
 <key>CFBundleTypeRole</key>
 <string>None</string>
@@ -124,10 +135,8 @@ fb1038202126265858 -> fb<FacebookAppID>
 <string>Google</string>
 <key>CFBundleURLSchemes</key>
 <array>
-<string>com.googleusercontent.apps.514652084725-lbq4ulvpadvb4mmumqg7q3b46mvnshcd</string>
+<string>{REVERSED_CLIENT_ID}</string>
 </array>
-
-com.googleusercontent.apps.514652084725-lbq4ulvpadvb4mmumqg7q3b46mvnshcd -> REVERSED_CLIENT_ID
 ```
 
 For more information about integrating of Auth0 with Amazon Cognito please check the following links:
