@@ -2,9 +2,6 @@
 //  LoginViewController.swift
 //  AKSwiftAuth0Test
 //
-//  Created by Iuliia Zhelem on 10.08.16.
-//  Copyright © 2016 Microsoft. All rights reserved.
-//
 
 import Foundation
 

@@ -2,9 +2,6 @@
 //  MyApplication.swift
 //  SwiftSample
 //
-//  Created by Iuliia Zhelem on 01.08.16.
-//  Copyright © 2016 Akvelon. All rights reserved.
-//
 
 import UIKit
 
