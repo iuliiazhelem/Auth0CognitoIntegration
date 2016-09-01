@@ -4,17 +4,14 @@ This sample exposes how to integrate Amazon Cognito with Auth0.
 
 You can integrate your mobile app with two solutions: Auth0 to get authentication with either Social Providers (Facebook, Twitter, etc.), Enterprise providers or regular Username and Password, and Amazon Cognito, to get a backend for your app.
 
-First of all you need to configure Amazon Web Services as describe in https://auth0.com/blog/integrating-auth0-with-amazon-cognito-in-ios/
+First of all you need to configure Amazon Web Services as described in [this link](https://auth0.com/blog/integrating-auth0-with-amazon-cognito-in-ios/).
 
 Note: In order for Cognito to verify signature of your Id Token, the signature algorithm must be RS256. Setting this to RS256 in auth0 console ("Apps->Settings->Show Advanced Settings->OAuth") will allow Cognito to fetch public key and certificate from your issuer's jwks uri
 
-Then you can integrate Amazon Cognito into your applocation. 
-For this you need to add 
+Then you can integrate Amazon Cognito into your application. In order to do it, please add this to your `Podfile`:
 ```
   pod 'AWSCognito'
 ```
-to your pod-file
-
 
 #### Important Snippets
 
@@ -44,7 +41,7 @@ class CustomIdentityProviderManager: NSObject, AWSIdentityProviderManager{
         AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
     }
 ```
-##### 3. Make Amazon login with idToken which you get after Auth0 authentication 
+##### 3. Make Amazon login with idToken which you get after doing Auth0 authentication 
 ```swift
     func doAmazonLogin(idToken: String, success : () -> (), _ failure : (NSError) -> ()) {
         var task: AWSTask?
@@ -80,7 +77,7 @@ class CustomIdentityProviderManager: NSObject, AWSIdentityProviderManager{
     }
 ```
 
-Before using the example please make sure that you change some keys in Info.plist with your data:
+Before using the example please make sure that you changed some keys in the `Info.plist`file with your data:
 - Auth0ClientId
 - Auth0Domain
 - CognitoIDPUrl
@@ -129,13 +126,13 @@ fb1038202126265858 -> fb<FacebookAppID>
 com.googleusercontent.apps.514652084725-lbq4ulvpadvb4mmumqg7q3b46mvnshcd -> REVERSED_CLIENT_ID
 ```
 
-For more iformation about integrating of auth0 with Amazon cognito please see link
+For more information about integrating of Auth0 with Amazon Cognito please see the links below:
 
-https://auth0.com/blog/integrating-auth0-with-amazon-cognito-in-ios/
+* [Link 1](https://auth0.com/blog/integrating-auth0-with-amazon-cognito-in-ios/)
 
-http://docs.aws.amazon.com/mobile/sdkforios/developerguide/
+* [Link 2](http://docs.aws.amazon.com/mobile/sdkforios/developerguide/)
 
-https://forums.aws.amazon.com/thread.jspa?messageID=696941
+* [Link 3](https://forums.aws.amazon.com/thread.jspa?messageID=696941)
 
-http://docs.aws.amazon.com/cognito/latest/developerguide/open-id.html
+* [Link 4](http://docs.aws.amazon.com/cognito/latest/developerguide/open-id.html)
 
