@@ -261,7 +261,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AKSwiftAuth0Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.akvelon.AKSwiftAuth0Test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.auth0.AKSwiftAuth0Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AKSwiftAuth0Test/AKSwiftAuth0Test-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -275,7 +275,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AKSwiftAuth0Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.akvelon.AKSwiftAuth0Test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.auth0.AKSwiftAuth0Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AKSwiftAuth0Test/AKSwiftAuth0Test-Bridging-Header.h";
 			};

@@ -10,6 +10,12 @@
 	<string>{CLIENT_ID}</string>
 	<key>Auth0Domain</key>
 	<string>{DOMAIN}</string>
+	<key>FacebookAppID</key>
+	<string>{FACEBOOK_APP_ID}</string>
+	<key>TwitterConsumerKey</key>
+	<string>{TWITTER_KEY}</string>
+	<key>TwitterConsumerSecret</key>
+	<string>{TWITTER_SECRET}</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -123,31 +129,5 @@
 			</array>
 		</dict>
 	</array>
-	<key>CLIENT_ID</key>
-	<string>{GOOGLE_CLIENT_ID}</string>
-	<key>FacebookAppID</key>
-	<string>{FACEBOOK_APP_ID}</string>
-	<key>GOOGLE_APP_ID</key>
-	<string>{GOOGLE_APP_ID}</string>
-	<key>IS_ADS_ENABLED</key>
-	<false/>
-	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
-	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
-	<key>IS_GCM_ENABLED</key>
-	<false/>
-	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
-	<key>PLIST_VERSION</key>
-	<string>1</string>
-	<key>PROJECT_ID</key>
-	<string>akswiftauth0testapp</string>
-	<key>REVERSED_CLIENT_ID</key>
-	<string>{REVERSED_CLIENT_ID}</string>
-	<key>TwitterConsumerKey</key>
-	<string>{TWITTER_KEY}</string>
-	<key>TwitterConsumerSecret</key>
-	<string>{TWITTER_SECRET}</string>
 </dict>
 </plist>
