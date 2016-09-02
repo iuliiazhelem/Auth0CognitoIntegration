@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2208554A1D646A9400589294 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220855491D646A9400589294 /* LoginViewController.swift */; };
+		2208554C1D653A2F00589294 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208554B1D653A2F00589294 /* LoginViewController.swift */; };
 		227C8DBC1D50D3BF0007A167 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 227C8DBB1D50D3BF0007A167 /* GoogleService-Info.plist */; };
 		2281535E1D4795D000F030F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2281535D1D4795D000F030F0 /* AppDelegate.swift */; };
 		228153601D4795D000F030F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2281535F1D4795D000F030F0 /* ViewController.swift */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		220855491D646A9400589294 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2208554B1D653A2F00589294 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		227C8DBB1D50D3BF0007A167 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2281535A1D4795D000F030F0 /* AKSwiftAuth0Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AKSwiftAuth0Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2281535D1D4795D000F030F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 		2281535C1D4795D000F030F0 /* AKSwiftAuth0Test */ = {
 			isa = PBXGroup;
 			children = (
-				220855491D646A9400589294 /* LoginViewController.swift */,
+				2208554B1D653A2F00589294 /* LoginViewController.swift */,
 				227C8DBB1D50D3BF0007A167 /* GoogleService-Info.plist */,
 				22B2025D1D4FF11A0030B362 /* MyApplication.swift */,
 				22B2025B1D4FEFCE0030B362 /* LoginManager.swift */,
@@ -142,7 +142,7 @@
 				228153601D4795D000F030F0 /* ViewController.swift in Sources */,
 				22B2025C1D4FEFCE0030B362 /* LoginManager.swift in Sources */,
 				2281535E1D4795D000F030F0 /* AppDelegate.swift in Sources */,
-				2208554A1D646A9400589294 /* LoginViewController.swift in Sources */,
+				2208554C1D653A2F00589294 /* LoginViewController.swift in Sources */,
 				22B2025E1D4FF11A0030B362 /* MyApplication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,7 +261,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AKSwiftAuth0Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.akvelon.AKSwiftAuth0Test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.auth0.AKSwiftAuth0Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AKSwiftAuth0Test/AKSwiftAuth0Test-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -275,7 +275,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AKSwiftAuth0Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.akvelon.AKSwiftAuth0Test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.auth0.AKSwiftAuth0Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AKSwiftAuth0Test/AKSwiftAuth0Test-Bridging-Header.h";
 			};

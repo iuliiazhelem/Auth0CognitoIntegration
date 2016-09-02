@@ -2,9 +2,6 @@
 //  AppDelegate.swift
 //  AKSwiftAuth0Test
 //
-//  Created by Iuliia Zhelem on 01.08.16.
-//  Copyright © 2016 Akvelon. All rights reserved.
-//
 
 import UIKit
 
@@ -22,7 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let twitterApiSecret = NSBundle.mainBundle().objectForInfoDictionaryKey(kTwitterConsumerSecret) as! String
         let twitter = A0TwitterAuthenticator.newAuthenticatorWithKey(twitterApiKey, andSecret:twitterApiSecret)
         
-        let google = A0GoogleAuthenticator.newAuthenticatorWithClientId(NSBundle.mainBundle().objectForInfoDictionaryKey(kGoogleClientId) as! String)
+        let google = A0GoogleAuthenticator.newAuthenticator()
+        google.clientProvider = A0Lock.sharedLock()
+        //Need for configuring the google authenticator from GoogleService-Info.plist
+        google.applicationLaunchedWithOptions(launchOptions)
         
         A0Lock.sharedLock().registerAuthenticators([twitter, facebook, google]);
 
