@@ -123,9 +123,8 @@ Before using the example please make sure that you change some keys in `Info.pli
 </array>
 ```
 
-##### Google data from the `GoogleServices-Info.plist` file which you can download from [this wizard](https://developers.google.com/mobile/add?platform=ios). For more details about connection your app to Google see [link](https://auth0.com/docs/connections/social/google) and [iOS doc](https://auth0.com/docs/libraries/lock-ios/native-social-authentication#google)
-- GOOGLE_APP_ID
-- REVERSED_CLIENT_ID
+##### For configuring Google authentication you need to download your own `GoogleServices-Info.plist` file from [this wizard](https://developers.google.com/mobile/add?platform=ios) and replace it with existing file. Also please find REVERSED_CLIENT_ID in this file and add it to CFBundleURLSchemes. For more details about connecting your app to Google see [this link](https://auth0.com/docs/connections/social/google) and [this iOS doc](https://auth0.com/docs/libraries/lock-ios/native-social-authentication#google):
+
 - CFBundleURLSchemes
 
 ```
