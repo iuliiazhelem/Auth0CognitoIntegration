@@ -6,10 +6,10 @@ You can integrate your mobile app with two solutions:
 - Auth0 to get authentication with either Social Providers (Facebook, Twitter, etc.), Enterprise providers or regular Username and Password
 - Amazon Cognito, to get a backend for your app.
 
-First of all you need to configure Amazon Web Services as describe [here](https://auth0.com/blog/integrating-auth0-with-amazon-cognito-in-ios/)
+First of all you need to configure Amazon Web Services as described [here](https://auth0.com/blog/integrating-auth0-with-amazon-cognito-in-ios/)
 
 ### Note: 
-In order for Cognito to verify signature of your `Id Token`, the signature algorithm **must be RS256**. Setting this to RS256 in the Auth0 console ("Apps->Settings->Show Advanced Settings->OAuth") will allow Cognito to fetch the public key and certificate from your issuer's jwks uri.
+In order for Cognito to verify the signature of your `Id Token`, the signature algorithm **must be RS256**. Setting this to RS256 in the Auth0 console ("Apps->Settings->Show Advanced Settings->OAuth") will allow Cognito to fetch the public key and the certificate from your issuer's jwks uri.
 
 Then you can integrate Amazon Cognito into your application. 
 
@@ -46,7 +46,7 @@ init() {
     AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
 }
 ```
-### Step 3: Make Amazon login with idToken which you get after Auth0 authentication 
+### Step 3: Make Amazon login with idToken which you get after doing the Auth0 authentication 
 ```swift
 func doAmazonLogin(idToken: String, success : () -> (), _ failure : (NSError) -> ()) {
     var task: AWSTask?
@@ -82,7 +82,7 @@ func initializeClients(logins: [NSObject : AnyObject]?) -> AWSTask? {
 }
 ```
 
-Before using the example please make sure that you change some keys in `Info.plist` with your data:
+Before using the example please make sure that you change some keys in the `Info.plist` file with your data:
 
 ##### Auth0 data from [Auth0 Dashboard](https://manage.auth0.com/#/applications)
 - Auth0ClientId
@@ -104,11 +104,11 @@ Before using the example please make sure that you change some keys in `Info.pli
 - CognitoIDPUrl
 - CognitoPoolID 
 
-##### Twitter data from the configured [Social connection](https://manage.auth0.com/#/connections/social). For more details about connection your app to Twitter see [link](https://auth0.com/docs/connections/social/twitter)
+##### Twitter data from the configured [Social connection](https://manage.auth0.com/#/connections/social). For more details about connecting your app to Twitter see [link](https://auth0.com/docs/connections/social/twitter)
 - TwitterConsumerKey
 - TwitterConsumerSecret
 
-##### Facebook data from the configured [Social connection](https://manage.auth0.com/#/connections/social). For more details about connection your app to Facebook see [link](https://auth0.com/docs/connections/social/facebook)
+##### Facebook data from the configured [Social connection](https://manage.auth0.com/#/connections/social). For more details about connecting your app to Facebook see [link](https://auth0.com/docs/connections/social/facebook)
 - FacebookAppID
 - CFBundleURLSchemes
 
@@ -123,7 +123,7 @@ Before using the example please make sure that you change some keys in `Info.pli
 </array>
 ```
 
-##### For configuring Google authentication you need to download your own `GoogleServices-Info.plist` file from [this wizard](https://developers.google.com/mobile/add?platform=ios) and replace it with existing file. Also please find REVERSED_CLIENT_ID in this file and add it to CFBundleURLSchemes. For more details about connecting your app to Google see [this link](https://auth0.com/docs/connections/social/google) and [this iOS doc](https://auth0.com/docs/libraries/lock-ios/native-social-authentication#google):
+##### For configuring Google authentication you need to download your own `GoogleServices-Info.plist` file from [this wizard](https://developers.google.com/mobile/add?platform=ios) and replace it in the existing file. Also please find the  REVERSED_CLIENT_ID in this file and add it to the CFBundleURLSchemes. For more details about connecting your app to Google see [this link](https://auth0.com/docs/connections/social/google) and [this iOS doc](https://auth0.com/docs/libraries/lock-ios/native-social-authentication#google):
 
 - CFBundleURLSchemes
 
@@ -138,15 +138,9 @@ Before using the example please make sure that you change some keys in `Info.pli
 </array>
 ```
 
-For more information about integrating of Auth0 with Amazon Cognito please check the following links:
+For more information about integrating Auth0 with Amazon Cognito please check the following links:
 
 * [Link1](https://auth0.com/blog/integrating-auth0-with-amazon-cognito-in-ios/)
 * [Link2](http://docs.aws.amazon.com/mobile/sdkforios/developerguide/)
 * [Link3](https://forums.aws.amazon.com/thread.jspa?messageID=696941)
 * [Link4](http://docs.aws.amazon.com/cognito/latest/developerguide/open-id.html)
-
-
-
-
-
-
